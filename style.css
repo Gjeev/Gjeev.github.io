@@ -372,7 +372,8 @@ html {
     width: 100%;
     align-items: center;
     color: aliceblue;
-    
+   
+    justify-content: center;
 }
 .footer {
     color: aliceblue;
@@ -380,6 +381,8 @@ html {
     font-family: 'Poppins';
     text-align: center;
     background-color: rgb(45,40,74);
+    /* justify-content: center; */
+    width: 100%;
 }
 .pretty {
     color: aliceblue;
