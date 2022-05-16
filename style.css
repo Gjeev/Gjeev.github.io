@@ -10,16 +10,41 @@ html {
     margin: 0;
     padding: 0;
 }
-
+@media screen and (min-width:688px)
+{
+    .menu-wrap {
+        content-visibility: hidden;
+    }
+    
+}
+@media screen and (max-width:668px) {
+    .navigation {
+        content-visibility: hidden;
+    }
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: flex-end;
+    color: aliceblue;
+    font-family: Raleway;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.li {
+    padding: 1em 2em 1em 2em;
+}
+.li:hover {
+    padding: 1em 2em 1em 2em;
+    text-decoration: underline;
+}
 
 .ice {
     width: 100%;
     /* background-color: antiquewhite; */
 }
-#footer {
-    width: 100%;
-    /* background-color: aquamarine; */
-}
+
 :root {
     /* --primary-color: rgba(242, 248, 193, 0.50); */
     --overlay-color: rgba(225,159,188,0.50);
@@ -32,8 +57,8 @@ html {
     padding: 0 3rem;
 }
 .showcase {
-    
-    height: 100vh;
+    width: 100%;
+    height: 75vh;
     
 }
 .showcase:before {
@@ -332,7 +357,7 @@ html {
 .lol {
     font-family: 'Raleway';
     color: aliceblue;
-    /* padding: 2rem 2rem 2rem 16rem; */
+    padding: 2.5rem;
 
     
 }
@@ -355,4 +380,7 @@ html {
     font-family: 'Poppins';
     text-align: center;
     background-color: rgb(45,40,74);
+}
+.pretty {
+    color: aliceblue;
 }
