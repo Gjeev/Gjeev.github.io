@@ -228,7 +228,7 @@ html {
     padding: 16px;
     /* padding: 5rem 6rem; */
     /* border-radius: 1em; */
-    
+    box-sizing: border-box;
     text-align: center;
     
 }
