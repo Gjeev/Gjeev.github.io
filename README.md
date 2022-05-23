@@ -1,5 +1,4 @@
-# gjeev.github.io
-portfolio website
-first html+css project, kinda had fun, will learn js next, byeeee 👋
+# portfolio website
+first html+css project, had fun, will learn js next, byeeee 👋
 
--> added some js too 
+-> added some js too 👍
