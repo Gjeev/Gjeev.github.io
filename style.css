@@ -2,9 +2,41 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    background-color: rgb(45,40,74);
+}
 .hero {
     width: 100%;
-    
+
+}
+span {
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+a.navigation.li:hover{
+    background-color: white;
+    color: #cd5b99;
+    border-radius: 5px;
+}
+
+.reveal {
+    /* position: relative; */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative
 }
 * {
     margin: 0;
@@ -15,7 +47,7 @@ html {
     .menu-wrap {
         content-visibility: hidden;
     }
-    
+
 }
 @media screen and (max-width:668px) {
     .navigation {
@@ -35,7 +67,8 @@ html {
 .li {
     padding: 1em 2em 1em 2em;
 }
-.li:hover {
+
+.li.navigation.li:hover {
     padding: 1em 2em 1em 2em;
     text-decoration: underline;
 }
@@ -58,8 +91,8 @@ html {
 }
 .showcase {
     width: 100%;
-    height: 75vh;
-    
+    height: 100vh;
+
 }
 .showcase:before {
     content:"";
@@ -78,7 +111,7 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
+    height: 83vh;
 
 }
 .showcase h1 {
@@ -150,7 +183,7 @@ html {
 .menu-wrap .toggler:checked + .hamburger > div:before,
 .menu-wrap .toggler:checked + .hamburger > div:after {
    top: 0;
-   transform: rotate(90deg); 
+   transform: rotate(90deg);
 }
 
 .menu-wrap .menu {
@@ -159,7 +192,7 @@ html {
     top: 0;
     height: 100%;
     width: 100%;
-     visibility: hidden; 
+     visibility: hidden;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -174,28 +207,28 @@ html {
     flex: none;
     align-items: center;
     justify-content: center;
-    transform: scale(0); 
+    transform: scale(0);
     transition: all 0.4s ease;
 }
 .menu-wrap .menu .div-2 {
     text-align: center;
     max-width: 90vw;
     max-height: 100vh;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.4s ease;
 }
 .list {
     font-size: 1.5rem;
     color: rgb(4, 5, 5);
     list-style: none;
-    } 
+    }
 .pad {
     padding: 15px 0;
 }
 .pad:hover {
     color:rgb(46,40,74);
     font-size: 2rem;
-    
+
 }
 .links{
     color: inherit;
@@ -204,7 +237,7 @@ html {
 }
 .menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
-    
+
 }
 .menu-wrap .toggler:checked ~ .menu .div-1 {
     transform: scale(1);
@@ -213,66 +246,6 @@ html {
 .menu-wrap .toggler:checked ~ .menu .div-2 {
     opacity: 1;
     transition: opacity 0.4 ease;
-}
-.grid {
-    display: block;
-    padding: 16px;
-    width: 100%;
-    /* min-width: 300px; */
-    /* min-height: 700px; */
-    background-color: rgb(230,164,192);
-    font-family: 'Poppins', sans-serif;
-    /* color: white; */
-    /* font-size: 1rem; */
-    display: block;
-    padding: 16px;
-    /* padding: 5rem 6rem; */
-    /* border-radius: 1em; */
-    box-sizing: border-box;
-    text-align: center;
-    
-}
-.col-1 {
-    background-color: rgb(230,164,192);
-    margin-bottom: 16px;
-    /* padding: 16px; */
-}
-.col-2 {
-    background-color: rgb(230,164,192);
-    margin-bottom: 16px;
-    /* padding: 70px; */
-    text-align: center;
-}
-.pic {
-    width: 100%;
-    border-radius: 1em;
-    height: 80%;
-    /* padding-left: 32px;
-    padding-top: 64px; */
-    
-}
-.caption {
-    padding: 0.5rem;
-    font-family: 'Raleway', sans-serif;
-    color: black;
-    font-weight: 600;
-    font-size: 14px;
-    height: 40%;
-    contain: content;
-} 
-.abt-me-h {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    /* top:-2em; */
-    color: black;
-    padding: 2rem 0; 
-
-}
-.p-abtme {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 700;
-    width: 89%;
 }
 @media screen and (min-width:400px)
 {
@@ -288,8 +261,8 @@ html {
 }
 .col3 {
     background-color: rgb(45,40,74);
-    margin-bottom: 16px; 
-    padding: 16px; 
+    margin-bottom: 16px;
+    padding: 6px;
 }
 @media screen and (min-width:768px)
 {
@@ -307,7 +280,7 @@ html {
         grid-template-columns: repeat(3, 1fr);
     }
 }
- 
+
 @media screen and (min-width:1200px)
 {
     .grid3 {
@@ -335,19 +308,33 @@ html {
 }
 .details {
     font-family: 'Poppins';
-    background-color: rgb(45,40,74);
+
     color: azure;
     font-size: 20px;
     padding: 0 2rem;
     text-align: center;
+
+}
+.h {
+    background-color: rgb(45,40,74);
 }
 .br {
     font-family: 'Poppins';
-    background-color: rgb(45,40,74);
-    color: rgb(226, 249, 21);
-    font-size: 35px;
-    padding: 2rem 2rem;
+     /* background-color: rgb(45,40,74);  */
+    color: white; 
+    font-size: 25px;
+    padding: 0.5em;
     text-align: center;
+    
+    background: linear-gradient(to right, rgb(45,40,74) 50%, #e19fbc 25%, #d7669e);
+    background-size: 200%;
+    /* -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;   */
+    transition: 0.5s ease-out;
+}
+.br:hover {
+    background-position: -100%;
+
 }
 .ice {
     width: 100%;
@@ -359,12 +346,13 @@ html {
     color: aliceblue;
     padding: 2.5rem;
 
-    
+
 }
 .icon {
     color: aliceblue;
     font-size: 30px;
-    padding: 15px;
+    margin: 15px;
+    padding: 5px;
 }
 .flex {
     display: flex;
@@ -385,4 +373,72 @@ html {
 }
 .pretty {
     color: aliceblue;
+}
+.pretty:hover {
+    color: #2d284a;
+}
+div.icon:hover{
+    background-color: white;
+}
+div.col3 {
+    transition: 0.3s;
+}
+div.col3:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        filter:hue-rotate(0deg);
+    }
+    100% {
+        filter:hue-rotate(360deg);
+    }
+}
+.about {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 1em 3em 1em 3em; */
+}
+.about h1{
+    font-size: 15vw; 
+    text-align: center;
+    font-family: 'Poppins';
+}
+.about p{
+    font-family: 'Poppins';
+    width: 50%;
+    text-align: center;
+    margin-bottom: 1.5em;
+    
+}
+.gtkm ul {
+    list-style: none;
+    text-align: center;
+    border: #e19fbc;
+    border-style: dashed;
+    /* width: 20%; */
+    margin-top: 1em;
+    padding: 2em 1em;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+
+}
+.skills ul {
+    list-style: none;
+    text-align: center;
+    font-family:'Raleway'
+}
+.heading {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.sub {
+    text-decoration: underline;
+    font-weight: 600;
 }
