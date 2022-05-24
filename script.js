@@ -31,3 +31,14 @@ function typeWriter()
 window.addEventListener("load",typeWriter)
 const audio = new Audio()
 audio.src = "./music/click.mp3"
+
+function hideMenu() {
+    let openMenu = document.querySelector(".toggler").checked
+
+    if(openMenu == true)
+    {
+        document.querySelector(".toggler").checked = false
+
+    }
+}
+window.addEventListener("scroll",hideMenu)
