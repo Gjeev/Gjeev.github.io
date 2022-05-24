@@ -5,10 +5,7 @@ html {
 body {
     background-color: rgb(45,40,74);
 }
-.hero {
-    width: 100%;
 
-}
 span {
     animation: blinker 1s linear infinite;
 }
@@ -36,7 +33,7 @@ a.navigation.li:hover{
 section {
     min-height: 100vh;
     width: 100%;
-    position: relative
+   
 }
 * {
     margin: 0;
@@ -80,29 +77,25 @@ section {
 
 :root {
     /* --primary-color: rgba(242, 248, 193, 0.50); */
-    --overlay-color: rgba(225,159,188,0.50);
+    --overlay-color: rgba(45,40,74,1);
     --menu-speed: 0.75s;
-}
-.container {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 3rem;
 }
 .showcase {
     width: 100%;
     height: 100vh;
-
 }
 .showcase:before {
     content:"";
-    background: url("./images/bg.jpg") no-repeat;
-    position: absolute;
+    /* background: url("./images/bg.jpg") no-repeat; */
+    background-image: url("./images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: -1;
+    /* z-index: -1; */
 
 }
 .showcase .showcase-inner {
@@ -199,7 +192,7 @@ section {
     justify-content: center;
 }
 .menu-wrap .menu .div-1 {
-    background: var(--overlay-color);
+    background: rgb(45,40,74);
     border-radius: 50%;
     width: 200vw;
     height: 200vh;
@@ -217,18 +210,17 @@ section {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.list {
+.list li{
     font-size: 1.5rem;
-    color: rgb(4, 5, 5);
+    color: white;
     list-style: none;
-    }
-.pad {
-    padding: 15px 0;
+    font-family: "Raleway";
+    font-weight: 700;
+    padding: 10px;
+    border-bottom: 1px solid  #ffeb3b;
 }
-.pad:hover {
-    color:rgb(46,40,74);
-    font-size: 2rem;
-
+.list li:last-child {
+    border-bottom: none;
 }
 .links{
     color: inherit;
@@ -380,23 +372,27 @@ section {
 div.icon:hover{
     background-color: white;
 }
-div.col3 {
-    transition: 0.3s;
-}
-div.col3:hover {
-    transform: scale(1.1);
-    z-index: 2;
-    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
-    animation: rotate 1.5s linear infinite;
-}
-@keyframes rotate {
-    0% {
-        filter:hue-rotate(0deg);
+@media screen and (min-width: 768px)
+{
+    div.col3 {
+        transition: 0.3s;
     }
-    100% {
-        filter:hue-rotate(360deg);
+    div.col3:hover {
+        transform: scale(1.1);
+        z-index: 2;
+        background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+        animation: rotate 1.5s linear infinite;
+    }
+    @keyframes rotate {
+        0% {
+            filter:hue-rotate(0deg);
+        }
+        100% {
+            filter:hue-rotate(360deg);
+        }
     }
 }
+
 .about {
     color: white;
     display: flex;
@@ -405,7 +401,7 @@ div.col3:hover {
     /* padding: 1em 3em 1em 3em; */
 }
 .about h1{
-    font-size: 15vw; 
+    font-size: 12vw; 
     text-align: center;
     font-family: 'Poppins';
 }
@@ -431,12 +427,17 @@ div.col3:hover {
 .skills ul {
     list-style: none;
     text-align: center;
-    font-family:'Raleway'
+    font-family:'Raleway';
+    
 }
-.heading {
+.about li{
+    padding-bottom: 0.3rem;
+}
+
+.about h2 {
     font-size: 1.5em;
-    font-weight: 700;
-    margin-bottom: 5px;
+    font-weight: 900;
+    margin-bottom: 8px; 
 }
 .sub {
     text-decoration: underline;
